@@ -1,12 +1,10 @@
 # Baby-CRM
 
-# PROJECT 4 README <!-- omit in toc -->
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
+**Project Title** To be determined....This is a Ruby on Rails with a React front-end app. I call it a baby CRM because it's only a snippet of a full CRM. In this application the user a.k.a the salesperson after logging-in can create a sales order to be reviewed later. 
 
-- [Overview](#overview)
+
+
 - [MVP](#mvp)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
@@ -24,42 +22,36 @@
 
 <br>
 
-## Overview
-
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-
-<br>
-
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
-<br>
-
 ### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+> - User is able to log in
+> - User is able to create a Sales Order
+> - Sales Order will have relationships with the Users, Customers and Products tables
+> - View of all Sales Orders created by User
+> - View of all Customers
+> - View for all Products
 
 <br>
+
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _A JavaScript library for building user interfaces._ |
+|   Axios   | _A promise based HTTP client for the browser and node.js._ |
+| React Dom | _A package that serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package._ |
+|   React Router Dom   | _A package that does declarative routing for React._ |
+|    Ruby   | _A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write._ |
+|    Rails   | _A server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller framework, providing default structures for a database, a web service, and web pages._ |
+|   PostgreSQL   | _A powerful, open source object-relational database with a strong reputation for reliability, feature robustness, and performance._ |
+| Puma | _A Ruby/Rack web server built for concurrency._ |
+|  Bcrypt  | _A cross platform file encryption utility._ |
+|  JWT  | _An Internet standard for creating data with optional signature and/or optional encryption whose payload holds JSON that asserts some number of claims. The tokens are signed either using a private secret or a public/private key._ |
+|  Rack Cors  | _A rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible._ |
+|  Byebug  | _A simple to use and feature rich debugger for Ruby._ |
 
 <br>
 
