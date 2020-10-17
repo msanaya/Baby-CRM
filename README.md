@@ -25,12 +25,12 @@
 ## MVP
 
 ### Goals
-> - User is able to log in
-> - User is able to create a Sales Order
-> - Sales Order will have relationships with the Users, Customers and Products tables
-> - View of all Sales Orders created by User
-> - View of all Customers
-> - View for all Products
+- User is able to log in
+- User is able to create a Sales Order
+- Sales Order will have relationships with the Users, Customers and Products tables
+- View of all Sales Orders created by User
+- View of all Customers
+- View for all Products
 
 <br>
 
