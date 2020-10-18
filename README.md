@@ -74,21 +74,9 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
+![Component Hierarchy](https://storage.googleapis.com/p4images/component_hierarchy.png)
 
-``` structure
 
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
-
-```
 
 #### Component Breakdown
 
