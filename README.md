@@ -139,7 +139,9 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+<p align="center">
+  <img src="https://storage.googleapis.com/p4images/ERD_p4.png" />
+</p>
 
 <br>
 
