@@ -70,37 +70,48 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
+
 
 #### Component Hierarchy
 
-![Component Hierarchy](https://storage.googleapis.com/p4images/component_hierarchy.png)
-
+<img alt="Component Hierarchy" src="https://storage.googleapis.com/p4images/component_hierarchy.png" width="350">
 
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-|  Component   |    Type    | state | props | Description                                                      |
+All components will be functional.
+
+<br>
+
+|  Component   |  state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Header    |   n   |   n   | _The header will contain the logo._               |
+|  Footer  |  n   |   n   | _The footer will contain author contact information and links._ |
+|   Main    |   y   |   n   | _Main will render the sales orders. Links to DetailsSO, UpdateSO and CreateSO._ |
+|    Register    |    y   |   n   | _Register will have a form for the user to create an account._ |
+| CreateSO |    y   |   y   | _CreateSO short for create sales order will have a sales form for the user._ |
+|    DetailsSO    |    n   |   y   | _DetailSO will show all the information a sales order contains._ |
+|   UpdateSO    |      y   |   y   | _UpdateSO will allow the user to modify an existing sales order._ |
+| Products |   n   |   y   | _Products will render each product using flexbox._  |
+
+
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
+<br>
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| Task                | Priority | Estimated Time | Actual Time Inves | 
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Create Database    |    H     |     5 hrs      |     TBD     |   
+| Create CRUD Actions |    M     |     3 hrs      |     TBD     |    
+| Deploy Rails API |    H     |     1.5 hrs      |     TBD     |    
+| Create React App Skeleton |    M     |     3 hrs      |     TBD     |     
+| Map Screens |    H     |     16 hrs      |    TBD   |     
+| Styling |    H     |     3 hrs      |    TBD     |     
+| TOTAL               |          |     31.5 hrs      |     TBD     |     
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
 
 <br>
 
