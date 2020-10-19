@@ -63,10 +63,11 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 WIREFRAME GOES HERE.
 
-![Desktop](https://storage.googleapis.com/p4images/Desktop_View.pdf)
+https://storage.googleapis.com/p4images/Desktop_View.pdf
 - Desktop Landing
 
-![Mobile](https://storage.googleapis.com/p4images/Mobile_View.pdf)
+https://storage.googleapis.com/p4images/Mobile_View.pdf
+- Mobile View
 
 <br>
 
