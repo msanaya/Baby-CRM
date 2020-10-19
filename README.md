@@ -101,8 +101,8 @@ All components will be functional.
 
 <br>
 
-| Task                | Priority | Estimated Time | Actual Time Inves | 
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Task                | Priority | Estimated Time | Actual Time Invested | 
+| ------------------- | :------: | :------------: | :-----------: | 
 | Create Database    |    H     |     5 hrs      |     TBD     |   
 | Create CRUD Actions |    M     |     3 hrs      |     TBD     |    
 | Deploy Rails API |    H     |     1.5 hrs      |     TBD     |    
