@@ -71,7 +71,7 @@ WIREFRAME GOES HERE.
 
 #### Component Tree
 
-<img alt="Component Tree" src="https://storage.googleapis.com/p4images/component_hierary.png" width="350">
+<img alt="Component Tree" src="https://storage.googleapis.com/p4images/component_tree.jpg" width="350">
 
 <br>
 
