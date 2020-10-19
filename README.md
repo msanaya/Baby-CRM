@@ -85,7 +85,7 @@ All components will be functional.
 <br>
 
 |  Component   |  state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+| :----------: | :--------: | :---: | :--------------------------------------------------------------- |
 |    Header    |   n   |   n   | _The header will contain the logo._               |
 |  Footer  |  n   |   n   | _The footer will contain author contact information and links._ |
 |   Main    |   y   |   n   | _Main will render the sales orders. Links to DetailsSO, UpdateSO and CreateSO._ |
