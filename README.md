@@ -82,7 +82,6 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 All components will be functional.
 
-<br>
 
 |  Component   |  state | props | Description                                                      |
 | :----------: | :--------: | :---: | :--------------------------------------------------------------- |
@@ -95,11 +94,9 @@ All components will be functional.
 |   UpdateSO    |      y   |   y   | _UpdateSO will allow the user to modify an existing sales order._ |
 | Products |   n   |   y   | _Products will render each product using flexbox._  |
 
-
+<br>
 
 #### Time Estimates
-
-<br>
 
 | Task                | Priority | Estimated Time | Actual Time Invested | 
 | ------------------- | :------: | :------------: | :-----------: | 
@@ -109,7 +106,7 @@ All components will be functional.
 | Create React App Skeleton |    M     |     3 hrs      |     TBD     |     
 | Map Screens |    H     |     16 hrs      |    TBD   |     
 | Styling |    H     |     3 hrs      |    TBD     |     
-| TOTAL               |          |     31.5 hrs      |     TBD     |     
+| **TOTAL**               |          |     **31.5 hrs**     |     **TBD**     |     
 
 
 
