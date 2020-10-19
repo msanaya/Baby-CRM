@@ -1,7 +1,7 @@
-# Baby-CRM
+# SMALL-CRM
 
 
-## Project Title To be determined....
+## Da Haus. _House Decor E-commerce_
 This is a Ruby on Rails with a React front-end app. I call it a baby CRM because it's only a snippet of a full CRM. In this application the user a.k.a the salesperson after logging-in can create a sales order to be reviewed later. 
 
 
@@ -61,7 +61,7 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 #### Wireframes
 
-WIREFRAME GOES HERE.
+
 
 https://storage.googleapis.com/p4images/Desktop_View.pdf
 - Desktop Landing
