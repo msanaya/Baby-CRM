@@ -122,7 +122,7 @@ All components will be functional.
 #### ERD Model
 
 <p align="center">
-  <img src="https://storage.googleapis.com/p4images/ERD_p4_2.png" />
+  <img src="https://storage.googleapis.com/p4images/ERD_Final.png" />
 </p>
 
 <br>
