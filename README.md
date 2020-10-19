@@ -61,24 +61,27 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
+WIREFRAME GOES HERE.
 
 ![Dummy Link](url)
 
 - Desktop Landing
 
+<br>
 
 #### Component Tree
 
+<img alt="Component Tree" src="https://storage.googleapis.com/p4images/component_hierary.png" width="350">
 
+<br>
 
 #### Component Hierarchy
 
 <img alt="Component Hierarchy" src="https://storage.googleapis.com/p4images/component_hierarchy.png" width="350">
 
+<br>
 
 #### Component Breakdown
-
 
 All components will be functional.
 
@@ -122,19 +125,20 @@ All components will be functional.
 
 <br>
 
-***
 
 ## Post-MVP
 
 - Being able to display data visualizations.
 - Having a customer profile option.
 
-***
+<br>
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+> Brief code snippet of functionality that I'm proud of and a brief description will be included.
+
+<br>
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> List of all major issues encountered and their resolution will be included.
