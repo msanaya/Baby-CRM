@@ -18,7 +18,11 @@ class SalespeopleController < ApplicationController
     @salesperson = Salesperson.new(salesperson_params)
 
     if @salesperson.save
-      render json: @salesperson, status: :created, location: @salesperson
+      @token = encode({id: @salesperson.id})
+      render json: {
+        salesperson: @salesperson.attributes.except('password_digest'), 
+        token: @token
+      },status: :created
     else
       render json: @salesperson.errors, status: :unprocessable_entity
     end
