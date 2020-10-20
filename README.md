@@ -62,12 +62,12 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 #### Wireframes
 
 
-
+Desktop View
 https://storage.googleapis.com/p4images/Desktop_View.pdf
-- Desktop Landing
 
+Mobile View
 https://storage.googleapis.com/p4images/Mobile_View.pdf
-- Mobile View
+
 
 <br>
 
