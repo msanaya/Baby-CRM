@@ -1,12 +1,12 @@
-# SMALL-CRM
+# Baby-CRM
 
+# PROJECT 4 README <!-- omit in toc -->
 
-## Da Haus. _House Decor E-commerce_
-This is a Ruby on Rails with a React front-end app. I call it a baby CRM because it's only a snippet of a full CRM. In this application the user a.k.a the salesperson after logging-in can create a sales order to be reviewed later. 
+> The Project Planning section **should be completed** for your project pitch with instructors.
+>
+> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
 
-
-<br>
-
+- [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
   - [Libraries and Dependencies](#libraries-and-dependencies)
@@ -24,36 +24,42 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 <br>
 
-## MVP
+## Overview
 
-### Goals
-- User is able to log in
-- User is able to create a Sales Order
-- Sales Order will have relationships with the Users, Customers and Products tables
-- View of all Sales Orders created by User
-- View of all Customers
-- View for all Products
+_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+
 
 <br>
 
+## MVP
+
+> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
+
+_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+
+<br>
+
+### Goals
+
+- _Lorem ipsum, dolor sit amet,_
+- _consectetur adipiscing elit._
+- _Phasellus dapibus fermentum risus vitae bibendum._
+- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
+- _etc._
+
+<br>
 
 ### Libraries and Dependencies
 
+> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _A JavaScript library for building user interfaces._ |
-|   Axios   | _A promise based HTTP client for the browser and node.js._ |
-| React Dom | _A package that serves as the entry point to the DOM and server renderers for React. It is intended to be paired with the generic React package._ |
-|   React Router Dom   | _A package that does declarative routing for React._ |
-|    Ruby   | _A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write._ |
-|    Rails   | _A server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller framework, providing default structures for a database, a web service, and web pages._ |
-|   PostgreSQL   | _A powerful, open source object-relational database with a strong reputation for reliability, feature robustness, and performance._ |
-| Puma | _A Ruby/Rack web server built for concurrency._ |
-|  Bcrypt  | _A cross platform file encryption utility._ |
-|  JWT  | _An Internet standard for creating data with optional signature and/or optional encryption whose payload holds JSON that asserts some number of claims. The tokens are signed either using a private secret or a public/private key._ |
-|  Rack Cors  | _A rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible._ |
-|  Byebug  | _A simple to use and feature rich debugger for Ruby._ |
+|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
+|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
+| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
+|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
+|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br>
 
@@ -61,59 +67,77 @@ This is a Ruby on Rails with a React front-end app. I call it a baby CRM because
 
 #### Wireframes
 
+> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
+![Dummy Link](url)
 
-https://storage.googleapis.com/p4images/Desktop_View.pdf
 - Desktop Landing
 
-https://storage.googleapis.com/p4images/Mobile_View.pdf
-- Mobile View
+![Dummy Link](url)
 
-<br>
+- Desktop Hero
+
+![Dummy Link](url)
+
+- Resource Index
+
+![Dummy Link](url)
+
+- Resource Show
+
+![Dummy Link](url)
+
+- Tablet Resource Index
+
+![Dummy Link](url)
+
+- Mobile Resource Index
 
 #### Component Tree
 
-<img alt="Component Tree" src="https://storage.googleapis.com/p4images/component_tree.jpg" width="350">
-
-<br>
+> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
 
 #### Component Hierarchy
 
-<img alt="Component Hierarchy" src="https://storage.googleapis.com/p4images/component_hierarchy.png" width="350">
+> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
-<br>
+``` structure
+
+src
+|__ assets/
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups
+|__ components/
+      |__ Header.jsx
+|__ services/
+
+```
 
 #### Component Breakdown
 
-All components will be functional.
+> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-
-|  Component   |  state | props | Description                                                      |
-| :----------: | :--------: | :---: | :--------------------------------------------------------------- |
-|    Header    |   n   |   n   | _The header will contain the logo._               |
-|  Footer  |  n   |   n   | _The footer will contain author contact information and links._ |
-|   Main    |   y   |   n   | _Main will render the sales orders. Links to DetailsSO, UpdateSO and CreateSO._ |
-|    Register    |    y   |   n   | _Register will have a form for the user to create an account._ |
-| CreateSO |    y   |   y   | _CreateSO short for create sales order will have a sales form for the user._ |
-|    DetailsSO    |    n   |   y   | _DetailSO will show all the information a sales order contains._ |
-|   UpdateSO    |      y   |   y   | _UpdateSO will allow the user to modify an existing sales order._ |
-| Products |   n   |   y   | _Products will render each product using flexbox._  |
-
-<br>
+|  Component   |    Type    | state | props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
+|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
+| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Time Estimates
 
-| Task                | Priority | Estimated Time | Actual Time Invested | 
-| ------------------- | :------: | :------------: | :-----------: | 
-| Create Database    |    H     |     5 hrs      |     TBD     |   
-| Create CRUD Actions |    M     |     3 hrs      |     TBD     |    
-| Deploy Rails API |    H     |     1.5 hrs      |     TBD     |    
-| Create React App Skeleton |    M     |     3 hrs      |     TBD     |     
-| Map Screens |    H     |     16 hrs      |    TBD   |     
-| Styling |    H     |     3 hrs      |    TBD     |     
-| **TOTAL**               |          |     **31.5 hrs**     |     **TBD**     |     
+> Use this section to estimate the time necessary to build out each of the components you've described above.
 
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
+| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
+| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
+> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -121,26 +145,22 @@ All components will be functional.
 
 #### ERD Model
 
-<p align="center">
-  <img src="https://storage.googleapis.com/p4images/ERD_p4_2.png" />
-</p>
+> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 <br>
 
+***
 
 ## Post-MVP
 
-- Being able to display data visualizations.
-- Having a customer profile option.
+> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
-<br>
+***
 
 ## Code Showcase
 
-> Brief code snippet of functionality that I'm proud of and a brief description will be included.
-
-<br>
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
 ## Code Issues & Resolutions
 
-> List of all major issues encountered and their resolution will be included.
+> Use this section to list of all major issues encountered and their resolution.
