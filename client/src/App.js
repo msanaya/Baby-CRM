@@ -1,26 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/shared/Header/Header';
 import Main from './components/main/Main';
-import Footer from './components/shared/Footer/Footer'
+import Footer from './components/shared/Footer/Footer';
+import Login from './components/auth/login/Login';
+import Register from './components/auth/register/Register'
+import { Route, Switch, useHistory } from 'react-router-dom';
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+
 import './App.css';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData)
+    }
+    handleVerify();
+  }, [])
+
+  const handleLogin = async (loginData) => {
+    const userData = await loginUser(loginData);
+    setCurrentUser(userData);
+    history.push('/')
+  }
+
+  const handleRegister = async (registerData) => {
+    const userData = await registerUser(registerData);
+    setCurrentUser(userData);
+    history.push('/')
+  }
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  }
   return (
     <div className="App">
       <Header />
-      {/* <Switch> */}
-        {/* <Route path='/login'> */}
-          {/* <Login handleLogin={handleLogin} /> */}
-        {/* </Route> */}
-        {/* <Route path='/register'> */}
-          {/* <Register handleRegister={handleRegister} /> */}
-        {/* </Route> */}
-        {/* <Route path='/'> */}
+      <Switch>
+        <Route path='/login'>
+          <Login handleLogin={handleLogin} />
+        </Route>
+        <Route path='/register'>
+          <Register handleRegister={handleRegister} />
+        </Route>
+        <Route path='/'>
           <Main>
-            {/* currentUser={currentUser} */}
-          {/* handleLogout={handleLogout} */}
+            currentUser={currentUser}
+          handleLogout={handleLogout}
           </Main>
-        {/* </Route> */}
+        </Route>
         {/* <Route> */}
           {/* <CreateSO /> */}
         {/* </Route> */}
@@ -33,7 +66,7 @@ function App() {
         {/* <Route> */}
           {/* <UpdateSO /> */}
         {/* </Route> */}
-      {/* </Switch> */}
+      </Switch>
       <Footer />
     </div >
   );

@@ -8,6 +8,8 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* HOMEPAGE */
+
 .main-container{
   background-color: #14140F;
   color: white;
@@ -61,6 +63,50 @@ button:hover {
   background-color: #848c62;
   color: whitesmoke;
 }
+
+/* .LOGIN */
+
+.login-title{
+  font-weight: 400;
+  font-size: 2.06em;
+  letter-spacing: -1.5px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  
+}
+
+.login{
+  background-color: #14140F;
+  color: white;
+  height: 100vh;
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 0 auto;
+}
+
+.login-button{
+background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 52px;
+  width: 343px;
+  color: white;
+  /* padding: 15px 32px; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9em;
+  font-weight: 900;
+  cursor: pointer;
+  /* box-shadow: (4px 4px 4px rgba(51, 75, 53, 0.25)); */
+}
+
+button:hover {
+  background-color: #848c62;
+  color: whitesmoke;
+}
+
 
 
 
