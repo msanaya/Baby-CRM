@@ -1,9 +1,8 @@
 class CreateCustomers < ActiveRecord::Migration[6.0]
   def change
     create_table :customers do |t|
-      t.serial :customer_id
-      t.string :customer_name
-      t.string :customer_address
+      t.string :name
+      t.string :address
 
       t.timestamps
     end
