@@ -1,0 +1,19 @@
+.header{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  height: 78px;
+}
+
+#header-title{
+  margin-left: 1.5em;
+  display:flex;
+  align-items: center;
+  font-size: 2.30em;
+  font-weight: 400;
+  letter-spacing: -3px;
+  text-align: left;
+
+}

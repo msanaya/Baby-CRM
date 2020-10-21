@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/shared/Header/Header';
+import Main from './components/main/Main';
+import Footer from './components/shared/Footer/Footer'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Header />
+      {/* <Switch> */}
+        {/* <Route path='/login'> */}
+          {/* <Login handleLogin={handleLogin} /> */}
+        {/* </Route> */}
+        {/* <Route path='/register'> */}
+          {/* <Register handleRegister={handleRegister} /> */}
+        {/* </Route> */}
+        {/* <Route path='/'> */}
+          <Main>
+            {/* currentUser={currentUser} */}
+          {/* handleLogout={handleLogout} */}
+          </Main>
+        {/* </Route> */}
+        {/* <Route> */}
+          {/* <CreateSO /> */}
+        {/* </Route> */}
+        {/* <Route> */}
+          {/* <DetailsSO /> */}
+        {/* </Route> */}
+        {/* <Route> */}
+          {/* <Products /> */}
+        {/* </Route> */}
+        {/* <Route> */}
+          {/* <UpdateSO /> */}
+        {/* </Route> */}
+      {/* </Switch> */}
+      <Footer />
+    </div >
   );
 }
 
