@@ -1,12 +1,12 @@
 class Salesperson < ApplicationRecord
   has_secure_password
-  has_many :sales_order
+  belongs_to :sales_order
 
-  validates :salesperson_name, 
+  validates :name, 
     :presence => true, 
     :uniqueness => true
 
-  validates :salesperson_username, 
+  validates :username, 
     :presence => true, 
     :uniqueness => true
 
