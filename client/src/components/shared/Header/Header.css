@@ -1,0 +1,23 @@
+.header{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  height: 78px;
+}
+
+.header-title{
+  margin-left: 1em;
+  display:flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-align: left;
+  text-decoration: none;
+  color: white;
+}
+.header-title:hover {
+  color: #848c62;
+}
