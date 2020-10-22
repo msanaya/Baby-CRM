@@ -19,43 +19,58 @@ export default function Register(props) {
   }
 
   return (
-    <form onSubmit={(e)=>{
-      e.preventDefault();
-      handleRegister(formData);
-    }}>
-      <h3>Register</h3>
-      {
-        error &&
-        <p>{error}</p>
-      }
-      <label>
-        Username:
+    <div class="login">
+      <form class="login" onSubmit={(e) => {
+        e.preventDefault();
+        handleRegister(formData);
+      }}>
+        <h3 class="login-title">Register</h3>
+        {
+          error &&
+          <p>{error}</p>
+        }
+        <label>
+          <input
+            class="login-input"
+            type="text"
+            value={username}
+            name="username"
+            placeholder=" create username"
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <input
+            class="login-input"
+            type="text"
+            // value={salesperson_name}
+            name="salesperson_name"
+            placeholder="write name"
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          <input
+            class="login-input"
+            type="text"
+            value={email}
+            name="email"
+            placeholder="write email"
+            onChange={handleChange}
+          />
+        </label>
+        <label>
         <input
-          type="text"
-          value={username}
-          name="username"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          type="text"
-          value={email}
-          name="email"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          name="password"
-          onChange={handleChange}
-        />
-      </label>
-      <button>Register</button>
-    </form>
+            class="login-input"
+            type="password"
+            value={password}
+            name="password"
+            placeholder="create password (min 8 characters)"
+            onChange={handleChange}
+          />
+        </label>
+        <button class="login-button">REGISTER</button>
+      </form>
+    </div>
   )
 }

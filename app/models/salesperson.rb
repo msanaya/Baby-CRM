@@ -1,5 +1,6 @@
 class Salesperson < ApplicationRecord
   has_secure_password
+  has_many :sales_order
 
   validates :salesperson_name, 
     :presence => true, 

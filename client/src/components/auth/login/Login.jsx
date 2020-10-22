@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -30,7 +30,8 @@ export default function Login(props) {
         <p>{error}</p>
       }
       <label>
-        <input
+          <input
+          class="login-input"
           type="text"
           value={username}
             name="username"
@@ -39,14 +40,16 @@ export default function Login(props) {
         />
       </label>
       <label>
-        <input
+          <input
+          class="login-input"
           type="password"
           value={password}
             name="password"
             placeholder="password"
           onChange={handleChange}
         />
-      </label>  
+        </label>  
+      
       <button class="login-button">LOG IN</button>
       </form>
       </div>
