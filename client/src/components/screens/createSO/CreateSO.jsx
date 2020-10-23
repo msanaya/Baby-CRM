@@ -16,7 +16,7 @@ const CreateSO = (props) => {
         <div id="right-side">
         {
         Products.map((product, index) => (
-         />
+        />
           ))
         }
         </div>

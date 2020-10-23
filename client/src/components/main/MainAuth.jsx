@@ -17,7 +17,6 @@ const MainAuth = (props) => {
         {salesOrdersMapped}
         </div>
       </div>
-    </div>
   );
 };
 

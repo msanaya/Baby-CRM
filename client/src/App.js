@@ -51,6 +51,8 @@ function App() {
     fetchProducts()
   }, [])
 
+  const handleSubmit = event => event.preventDefault()
+
   return (
     <div className="App">
       <Header />
@@ -68,7 +70,9 @@ function App() {
           </Main>
         </Route>
         {/* <Route> */}
-          {/* <CreateSO /> */}
+        {/* <CreateSO
+        onSubmit={handleSubmit} /> */}
+        
         {/* </Route> */}
         {/* <Route> */}
           {/* <DetailsSO /> */}
