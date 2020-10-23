@@ -1,6 +1,8 @@
 class Customer < ApplicationRecord
   belongs_to :sales_order
 
+ 
+
   validates :name, 
     :presence => true, 
     :uniqueness => true

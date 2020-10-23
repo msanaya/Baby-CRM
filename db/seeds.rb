@@ -11,7 +11,7 @@ SalesOrder.destroy_all
 Salesperson.destroy_all
 Customer.destroy_all
 
-SalesOrder.create!( salesperson_id: 1, customer_id: 2, product_id: 1, status: "Submitted")
+SalesOrder.create!( salesperson_id: 1, customer_id: 1, product_id: 1, status: "Submitted")
 
 Customer.create!(name: "Derek Barker", address: "123 Main St, New York, New York, 27701")
 
