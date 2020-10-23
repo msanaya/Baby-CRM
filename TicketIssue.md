@@ -3,21 +3,21 @@
 
 ## Unexpected Behavior
 
-Making sure I'm doing the creating of the tables correctly.
+My mock data is not seeding to the database.
 
 ## Expected Behavior
 
-Sucessfull creation of the Sales Orders table.
+Mock data is seeded sucessfully so I can do the rendering on the front end.
 
 ## Reproduce the Error
 
-Cannot reproduce since it has not been created.
+Download repo and run all necessary commands to make it run. Try to seed data locally. 
 
 
 
 ## Documentation
 
-rails g scaffold Sales_Order sales_order_id:serial user:references customer:references product:references 
+
 
 https://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/create_join_table
 

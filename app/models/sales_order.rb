@@ -1,7 +1,7 @@
 class SalesOrder < ApplicationRecord
   has_one :salesperson
   has_one :customer
-  has_and_belongs_to_many :product
+  has_and_belongs_to_many :products, :through => sales_order_products
 
   begin
     SalesOrder.find_or_create_by(@customer_id)
