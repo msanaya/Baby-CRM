@@ -1,5 +1,7 @@
 class Customer < ApplicationRecord
-  belongs_to :sales_order
+  has_many :sales_orders
+
+ 
 
   validates :name, 
     :presence => true, 

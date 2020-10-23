@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_205520) do
+ActiveRecord::Schema.define(version: 2020_10_23_194351) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,21 +32,24 @@ ActiveRecord::Schema.define(version: 2020_10_20_205520) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "products_sales_orders", id: false, force: :cascade do |t|
-    t.bigint "sales_order_id", null: false
-    t.bigint "product_id", null: false
-  end
-
   create_table "sales_orders", force: :cascade do |t|
     t.bigint "salesperson_id", null: false
     t.bigint "customer_id", null: false
-    t.bigint "product_id", null: false
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["customer_id"], name: "index_sales_orders_on_customer_id"
-    t.index ["product_id"], name: "index_sales_orders_on_product_id"
     t.index ["salesperson_id"], name: "index_sales_orders_on_salesperson_id"
+  end
+
+  create_table "sales_orders_products", force: :cascade do |t|
+    t.bigint "sales_order_id", null: false
+    t.bigint "product_id", null: false
+    t.integer "qty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_sales_orders_products_on_product_id"
+    t.index ["sales_order_id"], name: "index_sales_orders_products_on_sales_order_id"
   end
 
   create_table "salespeople", force: :cascade do |t|
@@ -59,6 +62,7 @@ ActiveRecord::Schema.define(version: 2020_10_20_205520) do
   end
 
   add_foreign_key "sales_orders", "customers"
-  add_foreign_key "sales_orders", "products"
   add_foreign_key "sales_orders", "salespeople"
+  add_foreign_key "sales_orders_products", "products"
+  add_foreign_key "sales_orders_products", "sales_orders"
 end

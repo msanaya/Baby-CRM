@@ -1,6 +1,6 @@
 class Salesperson < ApplicationRecord
   has_secure_password
-  belongs_to :sales_order
+  has_many :sales_orders
 
   validates :name, 
     :presence => true, 
@@ -12,7 +12,7 @@ class Salesperson < ApplicationRecord
 
   validates :email, 
     :presence => true, 
-    :uniqueness => true
+    :uniqueness => true,
     :format => { with: URI::MailTo::EMAIL_REGEXP }
 
   validates :password, 
