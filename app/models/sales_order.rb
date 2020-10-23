@@ -1,29 +1,33 @@
 class SalesOrder < ApplicationRecord
-  has_one :salesperson
-  has_one :customer
-  has_and_belongs_to_many :products, :through => sales_order_products
+  belongs_to :salesperson
+  belongs_to :customer
+  has_many :sales_orders_products
+  has_many :products, :through => :sales_orders_products
 
-  begin
-    SalesOrder.find_or_create_by(@customer_id)
-  rescue ActiveRecord::RecordNotUnique
-    retry
+  def find_or_create_customer (customer_id)
+    begin
+      SalesOrder.find_or_create_by(customer_id)
+    rescue ActiveRecord::RecordNotUnique
+      retry
+    end
   end
+  
 
 
-validates :salesperson_id,
-  # :presence => true,
-  :allow_nil => true, 
-  :uniqueness => true
+# validates :salesperson_id,
+#   # :presence => true,
+#   # :allow_nil => true, 
+#   :uniqueness => true
 
-validates :customer_id,
-  # :presence => true,
-  :allow_nil => true, 
-  :uniqueness => true
+# validates :customer_id,
+#   # :presence => true,
+#   # :allow_nil => true, 
+#   :uniqueness => true
 
-validates :product_id,
-  # :presence => true,
-  :allow_nil => true, 
-  :uniqueness => true
+# validates :product_id,
+#   # :presence => true,
+#   # :allow_nil => true, 
+#   :uniqueness => true
 
 validates :status,
   :presence => true

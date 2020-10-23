@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   # belongs_to :sales_order
-  has_and_belongs_to_many :sales_orders, :through => sales_order_products
+  has_many :sales_orders_products
+  has_many :sales_orders, :through => :sales_orders_products
 
 
   validates :name, 

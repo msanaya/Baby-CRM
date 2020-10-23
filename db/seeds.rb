@@ -6,24 +6,24 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.destroy_all
 SalesOrder.destroy_all
+Product.destroy_all
 Salesperson.destroy_all
 Customer.destroy_all
 
-SalesOrder.create!( salesperson_id: 1, customer_id: 1, product_id: 1, status: "Submitted")
-
-Customer.create!(name: "Derek Barker", address: "123 Main St, New York, New York, 27701")
-
-
-Salesperson.create!(username: "pilar01", name: "Pilar Barker", email: "pbarkerit@gmail.com", password: "holahola")
 
 
 
+@customer = Customer.create!(name: "Derek Barker", address: "123 Main St, New York, New York, 27701")
 
 
-Product.create!(name: 'Home Sweet Home Door Hanger', description: 'This “Home Sweet Home” door hanger sign creates a warm welcome for your guests. Finished off with frosty greenery and a bow. Height: 18 Inches; Width: 18 Inches Wood is weathered sealed so that it is suitable for outdoor use. Ribbon colors and styles may vary depending on availability.', qty: 20, price: 59.99,img: 'https://i.etsystatic.com/9950666/r/il/a324f9/2179851241/il_794xN.2179851241_g09d.jpg')
+@salesperson = Salesperson.create!(username: "pilar01", name: "Pilar Barker", email: "pbarkerit@gmail.com", password: "holahola")
 
+
+
+@product = Product.create!(name: 'Home Sweet Home Door Hanger', description: 'This “Home Sweet Home” door hanger sign creates a warm welcome for your guests. Finished off with frosty greenery and a bow. Height: 18 Inches; Width: 18 Inches Wood is weathered sealed so that it is suitable for outdoor use. Ribbon colors and styles may vary depending on availability.', qty: 20, price: 59.99,img: 'https://i.etsystatic.com/9950666/r/il/a324f9/2179851241/il_794xN.2179851241_g09d.jpg')
+
+SalesOrder.create!( salesperson:@salesperson, customer:@customer, products:[@product], status: "Submitted")
 
 
 # Product.create(name: 'Macrame Tassels Wall Decor', description: 'Can be decorated in a variety of areas, colors and styles are versatile
