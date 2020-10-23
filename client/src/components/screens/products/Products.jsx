@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const Products = (props) => {
   const [currentUser, setCurrentProducts] = useState([])
+
+  
   
   return (
     <div class="main-container">
@@ -10,7 +12,7 @@ const Products = (props) => {
       <h2 id="main-subtitle">Welcome, </h2>
       <div id="main-subcontainer">
         {
-        products.map((product, index) => (
+        getAllProducts.map((product, index) => (
         <img class="product-cards" key={index} alt="Item not available"  src={product.img} />
           ))
         }

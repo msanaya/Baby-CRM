@@ -6,13 +6,16 @@ import Login from './components/auth/login/Login';
 import Register from './components/auth/register/Register'
 import { Route, Switch, useHistory } from 'react-router-dom';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import { getAllProducts } from '../../services/products'
 
 import './App.css';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
+  const [allProducts, setAllProducts] = useState([])
   const history = useHistory();
 
+// LOGIN STUFF //
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
@@ -38,6 +41,16 @@ function App() {
     localStorage.removeItem('authToken');
     removeToken();
   }
+  //////////////////////////////
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getAllProducts()
+      setAllProducts(products)
+      setQueriedProducts(products)
+    }
+    fetchProducts()
+  }, [])
+
   return (
     <div className="App">
       <Header />
