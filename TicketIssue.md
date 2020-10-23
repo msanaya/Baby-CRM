@@ -3,7 +3,8 @@
 
 ## Unexpected Behavior
 
-My mock data is not seeding to the database.
+My mock data is not seeding to the database. (remind me to ask about views in rails vs react, <%= text_field ‘invoiceitems[]’, ‘item_price’ %>
+<%= text_field ‘invoiceitems[]’, ‘item_qty’ %> etc.)
 
 ## Expected Behavior
 
@@ -18,10 +19,9 @@ Download repo and run all necessary commands to make it run. Try to seed data lo
 ## Documentation
 
 
+https://guides.rubyonrails.org/routing.html
 
-https://apidock.com/rails/ActiveRecord/ConnectionAdapters/SchemaStatements/create_join_table
-
-https://guides.rubyonrails.org/v2.3.11/association_basics.html
+https://stackoverflow.com/questions/33378768/rails-invoicing-app 
 
 ## Attempted Resolution
 
