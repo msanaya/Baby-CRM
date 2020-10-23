@@ -1,23 +1,24 @@
 class Product < ApplicationRecord
-  belongs_to :sales_order
+  # belongs_to :sales_order
+  has_and_belongs_to_many :sales_orders
 
   validates :name, 
-  :presence => true, 
-  :uniqueness => true
+    :presence => true, 
+    :uniqueness => true
 
   validates :description, 
-  :presence => true
+    :presence => true
 
   validates :qty, 
-  :presence => true
+    :presence => true
   
 
   validates :price, 
-  :presence => true
+    :presence => true
   
 
   validates :img, 
-  :allow_blank => true, 
-  :uniqueness => true
+    :allow_blank => true, 
+    :uniqueness => true
 
 end
