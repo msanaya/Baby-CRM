@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 const Main = () => {
+  
+
+  // console.log(products)
+
   return (
     <div class="main-container">
       <h1 id="main-title">Da Haus.</h1>

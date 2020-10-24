@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -49,8 +49,10 @@ export default function Login(props) {
           onChange={handleChange}
         />
         </label>  
-      
-      <button class="login-button">LOG IN</button>
+        <Link to='/auth/main'>
+        <button class="login-button">LOG IN</button>
+      </Link>
+     
       </form>
       </div>
   )
