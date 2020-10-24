@@ -4,14 +4,14 @@ export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', { authentication: loginData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
-  return resp.data.user
+  return resp.data.salesperson
 }
 
 export const registerUser = async (registerData) => {
-  const resp = await api.post('/users/', { user: registerData })
+  const resp = await api.post('/salespeople/', { salesperson: registerData })
   localStorage.setItem('authToken', resp.data.token);
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
-  return resp.data.user
+  return resp.data.salesperson
 }
 
 export const verifyUser = async () => {
