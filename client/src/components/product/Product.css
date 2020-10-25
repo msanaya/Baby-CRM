@@ -2,7 +2,7 @@
   height: 15rem;
   width: 13.125rem;
   align-self: center;
- 
+  border-radius: 5px;
   /* display: cover; */
 }
 
@@ -12,12 +12,15 @@
   align-content: center;
   flex-wrap: wrap;
   margin: .8rem;
+  width: 15rem;
+  height: 22rem;
   
 }
 
 .product-name{
   text-align: center;
   font-weight: 500;
+  margin: .5rem;
 }
 /* .products {
   display:flex;

@@ -3,8 +3,10 @@
   color: white;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   height: 78px;
-  /* position: relative; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }

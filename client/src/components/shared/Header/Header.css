@@ -22,3 +22,10 @@
 .header-title:hover {
   color: #848c62;
 }
+
+#logout-button{
+  /* margin-right: 1em; */
+  display:flex;
+  /* align-items: center; */
+  background: yellow;
+}
