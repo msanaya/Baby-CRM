@@ -3,9 +3,8 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div class="footer">
-      <p id="footer-tile">MADE WITH LOVE<span aria-label="heart" role="img"> ❤️ </span> 
-BY PILAR BARKER</p>
+    <div className="footer">
+      <p id="footer-tile">MADE WITH LOVE<span aria-label="heart" role="img"> ❤️ </span>BY PILAR BARKER</p>
     </div>
   );
 };

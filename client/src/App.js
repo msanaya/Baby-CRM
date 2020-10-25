@@ -7,6 +7,7 @@ import Register from './components/auth/register/Register'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import './App.css';
 
+
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
