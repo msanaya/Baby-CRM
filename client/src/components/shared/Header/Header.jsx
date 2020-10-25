@@ -14,7 +14,7 @@ const Header = (props) => {
       {
         currentUser &&
         
-        <button onClick={handleLogout}>
+        <button id="logout-button" onClick={handleLogout}>
           Logout
       </button>
       }
