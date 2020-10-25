@@ -6,6 +6,8 @@ import Login from './components/auth/login/Login';
 import Register from './components/auth/register/Register'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import './App.css';
+import Products from './components/screens/products/Products';
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -55,6 +57,9 @@ function App() {
         <Route path='/'>
           <Main currentUser={currentUser} />
         </Route>
+        {/* <Route path="/products">
+          <Products  />
+        </Route> */}
       </Switch>
     </Layout>
   );

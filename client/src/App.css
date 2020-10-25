@@ -6,6 +6,7 @@
 
 .App {
   font-family: 'Montserrat', sans-serif;
+  height:100vh;
 }
 
 /* HOMEPAGE */
@@ -13,7 +14,7 @@
 .main-container{
   background-color: #14140F;
   color: white;
-  height: 100vh;
+  height: 100%;
   /* display: flex;
   flex-wrap: wrap; */
   /* justify-content: center; */
@@ -29,7 +30,7 @@
   /* padding-top: 7%; */
 }
 
-#main-subtitle{
+.main-subtitle{
   font-weight: 400;
   font-size: 3.10em;
   letter-spacing: -1.5px;
@@ -37,7 +38,7 @@
   color: #A78D80;
 }
 
-#main-buttons{
+.main-buttons{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -49,8 +50,8 @@
   background-color: black;
   border: 2px solid black;
   border-radius: 5px;
-  height: 52px;
-  width: 343px;
+  height: 3.25rem;
+  width: 21.43rem;
   color: white;
   /* padding: 15px 32px; */
   font-family: 'Montserrat', sans-serif;
@@ -62,6 +63,17 @@
 button:hover {
   background-color: #848c62;
   color: whitesmoke;
+}
+
+.menu-button{
+  background: #838384;
+  border: 2px solid #838384;
+  border-radius: 6px;
+  height: 2.25rem;
+  width: 16.31rem;
+  font-size: 1.125em;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* .LOGIN */
@@ -136,6 +148,14 @@ button:hover {
   font-family: 'Montserrat', sans-serif;
   padding-left: .8em;
   
+}
+
+.auth-buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* margin-bottom: 15%; */
 }
 
 

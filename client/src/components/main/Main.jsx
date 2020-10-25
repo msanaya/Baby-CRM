@@ -1,35 +1,89 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
+import { getAllProducts } from '../../services/products';
+import Products from '../screens/products/Products';
+import CreateSO from '../../components/screens/createSO/CreateSO'
 
 
 
 
 const Main = (props) => {
-  const { currentUser } = props
+  const [allProducts, setAllProducts] = useState([])
+  const { currentUser } = props;
 
-  // console.log(products)
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const products = await getAllProducts()
+      setAllProducts(products)
+      console.log(products)
+    }
+    fetchProducts()
+  }, [])
+
+
 
   return (
-    <div class="main-container">
-      <h1 id="main-title">Da Hausdfgdf.</h1>
-      <h2 id="main-subtitle">Welcome {currentUser?.name}</h2>
-      { 
+
+
+    <div className="main-container">
+      <h1 id="main-title">Da Haus.</h1>
+      <h2 class="main-subtitle">Welcome {currentUser?.name}</h2>
+      <div id="main-buttons">
+
+        {/* <button onClick={getData}>Get Data</button> */}
+      </div>
+
+      {
         currentUser ?
-          <h2>Hello</h2>
+          <div className="auth-buttons">
+            <Link to="/create_sales_order">
+              <button className="menu-button" type="submit">
+                Create Sales Order
+          </button>
+            </Link>
+            <Link to="/products">
+              <button className="menu-button" type="submit">
+                Products
+          </button>
+            </Link>
+            <Switch>
+              <Route path="/products">
+                <Products />
+              </Route>
+              <Route path="/create_sales_order">
+                <CreateSO />
+              </Route>
+            </Switch>
+          </div>
+          // <React.Fragment>
+
+          // </React.Fragment>
+
           :
-        <div id="main-buttons">
-        <Link to="/login">
-          <button class="main-button" type="submit">
-            Login
+          <div className="main-buttons">
+            <Link to="/login">
+              <button className="main-button" type="submit">
+                Login
+            </button>
+            </Link>
+            <Link to="/register">
+              <button className="main-button" type="submit">
+                Register
           </button>
-        </Link>
-        <Link to="/register">
-          <button class="main-button" type="submit">
-            Register
-          </button>
-        </Link>
-        </div>
+            </Link>
+          </div>
       }
+
+      {/* <Switch> */}
+      {/* <Route to="/products"> */}
+      {/* <Products /> */}
+      {/* </Route> */}
+      {/* </Switch> */}
+
+
+
     </div>
 
   );
@@ -68,7 +122,7 @@ export default Main;
   //   </div>
     // <CreateSO
     // onSubmit={handleSubmit} /> 
-    
+
   //   </Route> */}
   //    <Route> */}
   //     <DetailsSO /> */}

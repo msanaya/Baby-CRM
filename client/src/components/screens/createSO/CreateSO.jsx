@@ -12,8 +12,10 @@ const CreateSO = (props) => {
     <div class="main-container">
       <h1 id="main-title">Da Haus.</h1>
       <h2 id="main-subtitle">Welcome, </h2>
+     
       <div id="main-subcontainer">
         <div id="right-side">
+        <h3>Sales Ordersss</h3>
         {/* {
         Products.map((product, index) => (
         />

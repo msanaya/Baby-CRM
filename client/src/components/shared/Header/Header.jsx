@@ -6,9 +6,9 @@ const Header = (props) => {
   const { currentUser, handleLogout } = props;
 
   return (
-    <div class="header">
-      <Link to='/' class="header-title">
-      <h1 class="header-title">Da Haus.</h1>
+    <div className="header">
+      <Link to='/' className="header-title">
+      <h1 className="header-title">Da Haus.</h1>
       </Link>
       
       {
