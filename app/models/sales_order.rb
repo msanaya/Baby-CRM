@@ -2,7 +2,7 @@ class SalesOrder < ApplicationRecord
   belongs_to :salesperson
   belongs_to :customer
   has_many :sales_orders_products
-  has_many :products, :through => :sales_orders_products
+  has_many :products, :through => :sales_orders_products, dependent: :delete_all
 
   def find_or_create_customer (customer_id)
     begin

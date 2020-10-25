@@ -1,9 +1,24 @@
 .product-image {
   height: 15rem;
   width: 13.125rem;
-  display: cover;
+  align-self: center;
+ 
+  /* display: cover; */
 }
 
+.product-card{
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: .8rem;
+  
+}
+
+.product-name{
+  text-align: center;
+  font-weight: 500;
+}
 /* .products {
   display:flex;
   height: 360px;

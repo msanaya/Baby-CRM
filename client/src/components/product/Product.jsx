@@ -5,7 +5,7 @@ const Product = (props) => {
   return (
     <div className="product-card">
        <img className="product-image" src={props.img} alt={props.name} />
-        <h3>{props.name}</h3>
+        <h3 className="product-name">{props.name}</h3>
         {/* <p>${props.price}</p> */}
     </div>
   );
