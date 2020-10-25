@@ -1,0 +1,22 @@
+.main-subcontainer{
+  border: 1px solid gold;
+}
+
+form{
+  width: 90%;
+  margin: 0 auto;
+  /* display: block; */
+}
+
+.form-inputs{
+  display: flex;
+  flex-flow: wrap;
+  /* flex-direction: column; */
+  /* max-width: 90%; */
+  /* justify-content: space-evenly; */
+  margin: 0 auto;
+}
+
+.form-container{
+  display:block;
+}
