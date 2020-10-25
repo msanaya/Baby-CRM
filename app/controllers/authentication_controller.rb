@@ -3,7 +3,7 @@ class AuthenticationController < ApplicationController
 
   # POST /auth/login
   def login
-    @salesperson = Salesperson.find_by(salesperson_username: login_params[:salesperson_username])
+    @salesperson = Salesperson.find_by(username: login_params[:username])
     if @salesperson.authenticate(login_params[:password]) #authenticate method provided by Bcrypt and 'has_secure_password'
       token = encode({id: @salesperson.id})
       render json: {
@@ -24,7 +24,7 @@ class AuthenticationController < ApplicationController
   private
 
   def login_params
-    params.require(:authentication).permit(:salesperson_username, :password)
+    params.require(:authentication).permit(:username, :password)
   end
   # params.require(:salesperson).permit(:salesperson_id, :salesperson_username, :salesperson_name, :email, :password)
 end
