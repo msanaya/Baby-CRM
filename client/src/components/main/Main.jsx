@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Switch, useHistory, Link } from 'react-router-dom';
+import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom';
 import { getAllProducts } from '../../services/products';
 import { getAllCustomers } from '../../services/customers';
 import { getAllSalespeople } from '../../services/salespeople';
@@ -17,6 +17,7 @@ const Main = (props) => {
   const [allCustomers, setAllCustomers] = useState([]);
   const [salesOrder, setSalesOrder] = useState([]);
   const history = useHistory();
+  const { pathname } = useLocation();
   const { currentUser } = props;
 
   ///CREATE///
@@ -81,19 +82,26 @@ const Main = (props) => {
       {
         currentUser ?
           <div className="auth-buttons">
-            <Link to="/create_sales_order">
-              <button className="menu-button" type="submit">
-                Create Sales Order
-          </button>
-            </Link>
-            <Link to="/products">
-              <button className="menu-button" type="submit">
-                Products
-          </button>
-            </Link>
+            {pathname !== '/create_sales_order' &&
+              <>
+                <Link to="/create_sales_order">
+                  <button className="menu-button" type="submit">
+                    Create Sales Order
+                  </button>
+                </Link>
+                <Link to="/products">
+                  <button className="menu-button" type="submit">
+                    Products
+                  </button>
+                </Link>
+              </>
+            }
             <Switch>
               <Route path="/products">
+
+
                 <Products />
+
               </Route>
               <Route path="/create_sales_order">
                 <CreateSO />

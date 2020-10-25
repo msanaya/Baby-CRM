@@ -8,7 +8,10 @@ import '../createSO/CreateSO.css'
 const CreateSO = (props) => {
   const [isCreated, setCreated] = useState(false)
   const [salesOrder, setSalesOrder] = useState({
-    salespersonName: '',
+    salesperson_id: '',
+    customer_id: '',
+  
+
     customerName: '',
     customerAddress: '',
     productName: '',
@@ -17,7 +20,10 @@ const CreateSO = (props) => {
     productPrice: '',
     status: '',
   })
-
+  const [customer, setCustomer] = useState({
+    name: '',
+    address: '',
+  })
   ///CHANGING STATE TO NEW INFO USING SPREAD OPERATOR//
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -54,11 +60,12 @@ const CreateSO = (props) => {
         <h1 id="products-title">Sales Order</h1>
       </div>
       <div className="form-container">
-      <form
-            className="form-inputs"
+        <form
+            className='sales-form'
             onSubmit={handleSubmit} > 
               <label>
-              <input
+            <input
+                className='form-inputs'
                 placeholder='Salesperson Name'
                 type="text"
                 value={salesOrder.salespersonName}
@@ -67,7 +74,8 @@ const CreateSO = (props) => {
               />
               </label>
               <label>
-              <input
+            <input
+              className='form-inputs'
                 placeholder='Customer Name'
                 type="text"
                 value={salesOrder.customerName}
@@ -76,7 +84,8 @@ const CreateSO = (props) => {
               />
             </label>
             <label>
-              <input
+            <input
+              className='form-inputs'
                 placeholder='Customer Address'
                 type="text"
                 value={salesOrder.customerAddress}
@@ -85,7 +94,8 @@ const CreateSO = (props) => {
               />
             </label>
             <label>
-              <input
+            <input
+               className='form-inputs'
                 placeholder='Product Name'
                 type="text"
                 value={salesOrder.productName}
@@ -94,7 +104,8 @@ const CreateSO = (props) => {
               />
             </label>
             <label>
-              <input
+            <input
+               className='form-inputs'
                 placeholder='Product Description'
                 type="text"
                 value={salesOrder.productDescription}
@@ -103,7 +114,8 @@ const CreateSO = (props) => {
               />
             </label>
             <label>
-              <input
+            <input
+               className='form-inputs'
                 placeholder='Product Qty'
                 type="text"
                 value={salesOrder.productQty}
@@ -112,7 +124,8 @@ const CreateSO = (props) => {
               />
             </label>
             <label>
-              <input
+            <input
+               className='form-inputs'
                 placeholder='Product Price'
                 type="text"
                 value={salesOrder.productPrice}
@@ -121,7 +134,8 @@ const CreateSO = (props) => {
               />
             </label>
             <label>
-              <input
+            <input
+               className='form-inputs'
                 placeholder='Status'
                 type="text"
                 value={salesOrder.status}

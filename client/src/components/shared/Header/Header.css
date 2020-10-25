@@ -24,8 +24,13 @@
 }
 
 #logout-button{
-  /* margin-right: 1em; */
-  display:flex;
-  /* align-items: center; */
-  background: yellow;
+  margin: auto 20px;
+  height: 2.2rem;
+  background: #838384;
+  color: white;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 3px;
+  width: 8rem;
+  text-align: center;
 }
