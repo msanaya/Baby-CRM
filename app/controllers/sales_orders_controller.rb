@@ -33,7 +33,7 @@ class SalesOrdersController < ApplicationController
     end
   end
 
-  # DELETE /sales_orders/1
+  # DELETE /sales_orders/
   def destroy
     @sales_order.destroy
   end
