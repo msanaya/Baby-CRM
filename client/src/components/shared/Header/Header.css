@@ -2,6 +2,7 @@
   background-color: black;
   color: white;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   margin: 0 auto;
   height: 78px;

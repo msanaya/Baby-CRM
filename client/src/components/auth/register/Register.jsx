@@ -4,9 +4,10 @@ export default function Register(props) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
-    password: ""
+    password: "",
+    name: ""
   })
-  const { username, email, password } = formData;
+  const { username, email, password, name } = formData;
   const { error, handleRegister } = props;
 
 
@@ -43,8 +44,8 @@ export default function Register(props) {
           <input
             class="login-input"
             type="text"
-            // value={salesperson_name}
-            name="salesperson_name"
+            value={name}
+            name="name"
             placeholder="write name"
             onChange={handleChange}
           />
