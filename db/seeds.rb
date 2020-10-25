@@ -31,7 +31,7 @@ Soft cotton material, hand-woven, fine workmanship. Material: Cotton rope + natu
 
 Product.create(name: 'Remote Holder Box', description: 'Handcrafted mini wooden box, perfect for holding those remotes! I use mine on the coffee table, matches my farmhouse decor perfectly. Perfect housewarming gift!', qty: 18, price: 14.99, img: 'https://i.etsystatic.com/13189316/r/il/bdc39f/2512544497/il_794xN.2512544497_fsxs.jpg')
 
-Product.create(name: 'Himmeli Wall Sconce Air Plant Hanger', description: 'This “Home Sweet Home” door hanger sign creates a warm welcome for your guests. Finished off with frosty greenery and a bow. Height: 18 Inches; Width: 18 Inches Wood is weathered sealed so that it is suitable for outdoor use. Ribbon colors and styles may vary depending on availability.', qty: 20, price: 59.99,img: 'https://i.etsystatic.com/9950666/r/il/a324f9/2179851241/il_794xN.2179851241_g09d.jpg')
+Product.create(name: 'Himmeli Wall Sconce Air Plant Hangerr', description: 'Handmade Disclaimer: All of my products are individually hand made, they are one of a kind creations and not factory manufactured. As a result products will have subtle variations from one piece to the next. The images, descriptions and measurements you will find on my site have been used to best portray the products I sell. If you do have any questions or queries regarding this please feel free to message me.', qty: 28, price: 49.99,img: 'https://i.etsystatic.com/24562843/r/il/a8cba7/2552435041/il_794xN.2552435041_23g6.jpg')
 
 
 
