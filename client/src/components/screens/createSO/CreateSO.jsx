@@ -18,7 +18,7 @@ const CreateSO = (props) => {
     productDescription: '',
     productQty: '',
     productPrice: '',
-    status: '',
+    status: 'Submi',
   })
   const [customer, setCustomer] = useState({
     name: '',

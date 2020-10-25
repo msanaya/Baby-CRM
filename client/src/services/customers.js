@@ -6,6 +6,6 @@ export const getAllCustomers = async () => {
 }
 
 export const createCustomer = async (customerData) => {
-  const resp = await api.post('/customer', {customer: customerData});
+  const resp = await api.post('/customers', {customer: customerData});
   return resp.data;
 }

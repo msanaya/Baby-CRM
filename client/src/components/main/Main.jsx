@@ -6,6 +6,7 @@ import { getAllSalespeople } from '../../services/salespeople';
 import { createSalesOrder, updateSalesOrder } from '../../services/sales_orders';
 import Products from '../screens/products/Products';
 import CreateSO from '../../components/screens/createSO/CreateSO'
+import SalesOrderContainer from '../containers/SalesOrderContainer/SalesOrderContainer';
 
 
 
@@ -104,7 +105,7 @@ const Main = (props) => {
 
               </Route>
               <Route path="/create_sales_order">
-                <CreateSO />
+                <SalesOrderContainer products={allProducts} />
               </Route>
             </Switch>
           </div>

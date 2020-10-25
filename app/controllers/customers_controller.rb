@@ -15,12 +15,16 @@ class CustomersController < ApplicationController
 
   # POST /customers
   def create
-    @customer = Customer.new(customer_params)
-
-    if @customer.save
-      render json: @customer, status: :created, location: @customer
+    @customer = Customer.find_by(name:customer_params[:name])
+    if @customer 
+      render json: @customer
     else
-      render json: @customer.errors, status: :unprocessable_entity
+      @customer = Customer.new(customer_params)
+      if @customer.save
+        render json: @customer, status: :created, location: @customer
+      else
+        render json: @customer.errors, status: :unprocessable_entity
+      end
     end
   end
 
@@ -46,6 +50,6 @@ class CustomersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def customer_params
-      params.require(:customer).permit(:customer_id, :customer_name, :customer_address)
+      params.require(:customer).permit(:name, :address)
     end
 end
