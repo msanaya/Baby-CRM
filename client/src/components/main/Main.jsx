@@ -3,10 +3,11 @@ import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom';
 import { getAllProducts } from '../../services/products';
 import { getAllCustomers } from '../../services/customers';
 import { getAllSalespeople } from '../../services/salespeople';
-import { createSalesOrder, getAllSalesOrders, updateSalesOrder } from '../../services/sales_orders';
+import { getAllSalesOrders, updateSalesOrder } from '../../services/sales_orders';
 import Products from '../screens/products/Products';
 import SalesOrderContainer from '../containers/salesOrderContainer/SalesOrderContainer';
 import SalesOrders from '../salesOrders/SalesOrders';
+import DetailsSO from '../screens/detailsSO/DetailsSO';
 
 
 
@@ -111,6 +112,9 @@ const Main = (props) => {
               </Route>
               <Route path="/create_sales_order">
                 <SalesOrderContainer products={allProducts} setSalesOrder={setSalesOrder} />
+              </Route>
+              <Route path="/sales_orders/:id/edit">
+                <DetailsSO  />
               </Route>
             </Switch>
           </div>
