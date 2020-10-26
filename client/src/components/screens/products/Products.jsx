@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Product from '../../product/Product';
 import { getAllProducts } from '../../../services/products';
 import '../products/Products.css'
@@ -31,7 +32,10 @@ const Products = (props) => {
       <div className="all-products">
         <h1 id="products-title">Products</h1>
       </div>
+      <Link path="/products/:id/edit">
       <div className="products">{productsJSX}</div>
+      </Link>
+      
     </div>
       
     

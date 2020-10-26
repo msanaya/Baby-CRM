@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap');
 
-*{
+/* *{
   border: 1px solid gold;
-}
+} */
 
 .App {
   font-family: 'Montserrat', sans-serif;
@@ -23,7 +23,7 @@
 
 #main-title{
   font-weight: 400;
-  font-size: 4.06em;
+  font-size: 3.20em;
   letter-spacing: -3px;
   text-align: center;
   margin: 0 auto;
@@ -32,10 +32,11 @@
 
 .main-subtitle{
   font-weight: 400;
-  font-size: 2.90em;
+  font-size: 1.90em;
   letter-spacing: -1.5px;
   text-align: center;
   color: #A78D80;
+  margin: 0 auto;
 }
 
 .main-buttons{
@@ -74,6 +75,8 @@ button:hover {
   font-size: 1.125em;
   color: white;
   font-family: 'Montserrat', sans-serif;
+  margin: 1rem;
+  
 }
 
 /* .LOGIN */

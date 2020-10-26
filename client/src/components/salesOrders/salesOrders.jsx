@@ -26,6 +26,7 @@ const SalesOrders = (props) => {
   return (
   
     <div className="sales-orders-container">
+      <h4 className="sales-orders-title">SALES ORDERS</h4>
       <div className="sale-orders">{salesOrdersMapped}</div>
     </div>
   );

@@ -8,6 +8,7 @@ import Products from '../screens/products/Products';
 import SalesOrderContainer from '../containers/salesOrderContainer/SalesOrderContainer';
 import SalesOrders from '../salesOrders/SalesOrders';
 import DetailsSO from '../screens/detailsSO/DetailsSO';
+import ProductEdit from '../screens/productEdit/ProductEdit';
 
 
 
@@ -21,6 +22,8 @@ const Main = (props) => {
   const history = useHistory();
   const { pathname } = useLocation();
   const { currentUser } = props;
+
+  
 
   ///CREATE///
 
@@ -82,16 +85,17 @@ const Main = (props) => {
 
 
     <div className="main-container">
-      <h1 id="main-title">Da Haus.</h1>
+      <h1 id="main-title">Da Haus. Dashboard</h1>
       <h2 class="main-subtitle">Welcome {currentUser?.name}</h2>
       <div id="main-buttons">
       </div>
 
       {
         currentUser ?
-          <div className="auth-buttons">
+          <div className="auth-section">
             {pathname !== '/create_sales_order' &&
               <>
+              <div className="auth-buttons">
                 <Link to="/create_sales_order">
                   <button className="menu-button" type="submit">
                     Create Sales Order
@@ -101,7 +105,8 @@ const Main = (props) => {
                   <button className="menu-button" type="submit">
                     Products
                   </button>
-              </Link>
+                </Link>
+                </div>
               <SalesOrders  />
             </>
               
@@ -109,6 +114,9 @@ const Main = (props) => {
             <Switch>
               <Route path="/products">
                 <Products />
+              </Route>
+              <Route path="/products/:id/edit">
+                <ProductEdit />
               </Route>
               <Route path="/create_sales_order">
                 <SalesOrderContainer products={allProducts} setSalesOrder={setSalesOrder} />
