@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import a from '../../product/Product';
-import { getAllProducts } from '../../../services/products';
-import '../products/Products.css'
+import { getAllSalesOrders } from '../../services/sales_orders';
+import SalesOrder from '../salesOrder/salesOrder';
+import '../salesOrders/SalesOrders.css'
 
-const salesOrders = () => {
+const SalesOrders = (props) => {
   const [allSalesOrders, setallSalesOrders] = useState([])
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const products = await getAllProducts()
-      setAllProducts(products)
-      console.log(products)
+    const fetchSalesOrders = async () => {
+      const salesOrders = await getAllSalesOrders()
+      setallSalesOrders(salesOrders)
     }
-    fetchProducts()
+    fetchSalesOrders()
   }, [])
 
-  const productsJSX = allProducts.map((product, index) => (
-    <Product
-      img={product.img}
-      name={product.name}
+  const salesOrdersMapped = allSalesOrders.map((salesOrders, index) => (
+    <SalesOrder
+      id={salesOrders.id}
+      status={salesOrders.status}
       key={index}
     />
   ));
@@ -26,16 +25,11 @@ const salesOrders = () => {
   
   return (
   
-    <div>
-      <div className="all-products">
-        <h1 id="products-title">Products</h1>
-      </div>
-      <div className="products">{productsJSX}</div>
+    <div className="sales-orders-container">
+      <div className="sale-orders">{salesOrdersMapped}</div>
     </div>
-      
-    
   );
 };
 
 
-export default salesOrders;
+export default SalesOrders;

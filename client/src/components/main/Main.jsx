@@ -3,10 +3,10 @@ import { Route, Switch, useHistory, Link, useLocation } from 'react-router-dom';
 import { getAllProducts } from '../../services/products';
 import { getAllCustomers } from '../../services/customers';
 import { getAllSalespeople } from '../../services/salespeople';
-import { createSalesOrder, updateSalesOrder } from '../../services/sales_orders';
+import { createSalesOrder, getAllSalesOrders, updateSalesOrder } from '../../services/sales_orders';
 import Products from '../screens/products/Products';
-import CreateSO from '../../components/screens/createSO/CreateSO'
-import SalesOrderContainer from '../containers/SalesOrderContainer/SalesOrderContainer';
+import SalesOrderContainer from '../containers/salesOrderContainer/SalesOrderContainer';
+import SalesOrders from '../salesOrders/SalesOrders';
 
 
 
@@ -64,9 +64,15 @@ const Main = (props) => {
       setAllCustomers(customers)
       console.log(customers)
     }
+    const fetchSalesOrders = async () => {
+      const salesOrders = await getAllSalesOrders()
+      setSalesOrder(salesOrders)
+      console.log(salesOrders)
+    }
     fetchProducts();
     fetchSalespeople();
     fetchCustomers();
+    fetchSalesOrders();
   }, [])
 
 
@@ -94,8 +100,10 @@ const Main = (props) => {
                   <button className="menu-button" type="submit">
                     Products
                   </button>
-                </Link>
-              </>
+              </Link>
+              <SalesOrders  />
+            </>
+              
             }
             <Switch>
               <Route path="/products">
@@ -105,7 +113,7 @@ const Main = (props) => {
 
               </Route>
               <Route path="/create_sales_order">
-                <SalesOrderContainer products={allProducts} />
+                <SalesOrderContainer products={allProducts} setSalesOrder={setSalesOrder} />
               </Route>
             </Switch>
           </div>

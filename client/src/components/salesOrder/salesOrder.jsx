@@ -1,11 +1,11 @@
 import React from 'react';
-// import '../product/Product.css';
+ import '../salesOrder/salesOrder.css';
 
 const salesOrder = (props) => {
   return (
-    <div className="salesOrder-card">
-      <h3 className="salesOrder-id">{props.id}</h3>
-      <h3 className="salesOrder-status">{props.status}</h3>
+    <div className="sales-order-card">
+      <p className="sales-order-id"><span>Sales Order ID:</span>{props.id}</p>
+      <p className="sales-order-status"><span>Sales Order Status:</span>{props.status}</p>
     </div>
   );
 };

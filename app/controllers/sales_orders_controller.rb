@@ -1,6 +1,6 @@
 class SalesOrdersController < ApplicationController
   before_action :set_sales_order, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:create]
   # GET /sales_orders
   def index
     @sales_orders = SalesOrder.all
@@ -15,9 +15,10 @@ class SalesOrdersController < ApplicationController
 
   # POST /sales_orders
   def create
-    @sales_order = SalesOrder.new(sales_order_params)
-
-    if @sales_order.save
+    @sales_order = SalesOrder.new(sales_order_params.except(:products))
+    @sales_order.salesperson = @current_salesperson
+    if @sales_order.save 
+      @sales_order.products = sales_order_params[:products].map{|id|Product.find(id)}
       render json: @sales_order, include: [:salesperson, :customer, :products], status: :created, location: @sales_order
     else
       render json: @sales_order.errors, status: :unprocessable_entity
@@ -46,6 +47,6 @@ class SalesOrdersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sales_order_params
-      params.require(:sales_order).permit(:user_id, :customer_id, :product_id, :status)
+      params.require(:sales_order).permit(:user_id, :customer_id, :product_id, :status, products:[])
     end
 end

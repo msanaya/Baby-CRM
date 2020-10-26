@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { createCustomer } from '../../../services/customers';
+import { createSalesOrder } from '../../../services/sales_orders'
+import ProductsAdd from '../../containers/productsAdd/ProductsAdd';
 import CreateSO from '../../screens/createSO/CreateSO';
 import CreateCustomer from '../createCustomer/CreateCustomer';
 
@@ -16,7 +18,7 @@ const SalesOrderContainer = (props) => {
     address: '',
   })
 
-  const { products } = props;
+  const { products, setSalesOrder } = props;
 
   ///FUNCTIONS///
   const handleCustomerSubmit = async (e) => {
@@ -30,6 +32,23 @@ const SalesOrderContainer = (props) => {
     setCreated(true);
     }
     
+  const handleSalesOrderSubmit = async (e) => {
+    e.preventDefault()
+    const {products, ...rest} = salesOrderData
+    const newSalesOrder = await createSalesOrder({
+      ...rest,
+      products:products.map(p => p.id)
+    })
+    setSalesOrder(prevState => [...prevState,newSalesOrder])
+  }
+
+
+  const addProduct = (product) => {
+    setSalesOrderData(prevState => ({
+      ...prevState,
+        products: [...prevState.products, product]
+    }))
+  }
   
    ///PREVENT DEFAULT///
   //  const handleSubmit = async (event) => {
@@ -47,8 +66,14 @@ const SalesOrderContainer = (props) => {
         isCreated={isCreated}
         setCreated={setCreated}
       />
-      <CreateSO salesOrderData={salesOrderData} />
-      {/* <ProductsAdd products={products} /> */}
+      <CreateSO
+        salesOrderData={salesOrderData}
+        handleSalesOrderSubmit={handleSalesOrderSubmit}
+      />
+      <ProductsAdd
+        products={products}
+        addProduct={addProduct}
+      />
 
     </div>
   );

@@ -1,154 +1,21 @@
-import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
-// import Products from '../screens/products/Products';
-import { destroySalesOrder, createSalesOrder } from '../../../services/sales_orders';
-import '../createSO/CreateSO.css'
-
+import React from 'react';
 
 const CreateSO = (props) => {
-  const [isCreated, setCreated] = useState(false)
-  const [salesOrder, setSalesOrder] = useState({
-    salesperson_id: '',
-    customer_id: '',
-  
+  const { salesOrderData, handleSalesOrderSubmit } = props;
 
-    customerName: '',
-    customerAddress: '',
-    productName: '',
-    productDescription: '',
-    productQty: '',
-    productPrice: '',
-    status: 'Submi',
-  })
-  const [customer, setCustomer] = useState({
-    name: '',
-    address: '',
-  })
-  ///CHANGING STATE TO NEW INFO USING SPREAD OPERATOR//
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setSalesOrder({
-      ...salesOrder,
-      [name]: value
-    })
-  }
-
-  ///PREVENT DEFAULT///
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    const created = await createSalesOrder(salesOrder)
-    setCreated({ created })
-  }
-
-  ///COULD USE HISTORY PUSH?///
-  if (isCreated) {
-    return (
-      History.push('/')
-    )
-  }
-
-
-  //   const productsMapped = Products.map((product, index) =>
-  //   <Product _id={product._id} name={product.name} price={product.price} key={index} />
-  // )
-  // add state for current user
   return (
-
-
     <div>
-      <div className="sales-order-container">
-        <h1 id="products-title">Sales Order</h1>
-      </div>
-      <div className="form-container">
-        <form
-            className='sales-form'
-            onSubmit={handleSubmit} > 
-              <label>
-            <input
-                className='form-inputs'
-                placeholder='Salesperson Name'
-                type="text"
-                value={salesOrder.salespersonName}
-                name='salespersonName'
-                onChange={handleChange}
-              />
-              </label>
-              <label>
-            <input
-              className='form-inputs'
-                placeholder='Customer Name'
-                type="text"
-                value={salesOrder.customerName}
-                name='customerName'
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-            <input
-              className='form-inputs'
-                placeholder='Customer Address'
-                type="text"
-                value={salesOrder.customerAddress}
-                name='customerAddress'
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-            <input
-               className='form-inputs'
-                placeholder='Product Name'
-                type="text"
-                value={salesOrder.productName}
-                name='productName'
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-            <input
-               className='form-inputs'
-                placeholder='Product Description'
-                type="text"
-                value={salesOrder.productDescription}
-                name='productDescription'
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-            <input
-               className='form-inputs'
-                placeholder='Product Qty'
-                type="text"
-                value={salesOrder.productQty}
-                name='productQty'
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-            <input
-               className='form-inputs'
-                placeholder='Product Price'
-                type="text"
-                value={salesOrder.productPrice}
-                name='productPrice'
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-            <input
-               className='form-inputs'
-                placeholder='Status'
-                type="text"
-                value={salesOrder.status}
-                name='status'
-                onChange={handleChange}
-              />
-              </label>
-            <button type="submit">Submit</button>
-        </form>
-        </div>
+      <h3>Create Sales Order</h3>
+      {
+        salesOrderData.products.map(product => (
+          <div key={product.id}>
+            <p>{product.name}</p>
+          </div>
+        )
+          )
+      }
+      <button onClick={handleSalesOrderSubmit}>Submit Sales Order</button>
     </div>
-          // <button className="delete-button"
-          //   onClick={() => destroySalesOrder(salesOrder.id)}>Delete</button> 
   );
 };
 

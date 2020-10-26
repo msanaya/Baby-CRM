@@ -4,11 +4,11 @@ class Customer < ApplicationRecord
  
 
   validates :name, 
-    :presence => true, 
-    :uniqueness => true
+    :presence => true
+    
 
   validates :address, 
-    :presence => true, 
-    :uniqueness => true
+    :presence => true
+    
 
 end
