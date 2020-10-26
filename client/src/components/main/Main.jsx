@@ -23,21 +23,21 @@ const Main = (props) => {
 
   ///CREATE///
 
-  const handleSalesOrderCreate = async (SalesOrderData) => {
-    const newSalesOrder = await createSalesOrder(SalesOrderData);
-    setSalesOrder(prevState => ([...prevState, newSalesOrder]));
-    history.push('/')
-  }
+  // const handleSalesOrderCreate = async (SalesOrderData) => {
+  //   const newSalesOrder = await createSalesOrder(SalesOrderData);
+  //   setSalesOrder(prevState => ([...prevState, newSalesOrder]));
+  //   history.push('/')
+  // }
 
   ///EDIT///
 
-  const handleSalesOrderUpdate = async (id, SalesOrderData) => {
-    const updatedSalesOrder = await updateSalesOrder(id, SalesOrderData);
-    setSalesOrder(prevState => prevState.map(salesOrder => {
-      return salesOrder.id === Number(id) ? updatedSalesOrder : salesOrder
-    }))
-    history.push('/')
-  }
+  // const handleSalesOrderUpdate = async (id, SalesOrderData) => {
+  //   const updatedSalesOrder = await updateSalesOrder(id, SalesOrderData);
+  //   setSalesOrder(prevState => prevState.map(salesOrder => {
+  //     return salesOrder.id === Number(id) ? updatedSalesOrder : salesOrder
+  //   }))
+  //   history.push('/')
+  // }
 
   //DELETE//
 
@@ -107,10 +107,7 @@ const Main = (props) => {
             }
             <Switch>
               <Route path="/products">
-
-
                 <Products />
-
               </Route>
               <Route path="/create_sales_order">
                 <SalesOrderContainer products={allProducts} setSalesOrder={setSalesOrder} />
@@ -119,6 +116,7 @@ const Main = (props) => {
           </div>
 
           :
+          
           <div className="main-buttons">
             <Link to="/login">
               <button className="main-button" type="submit">
