@@ -20,19 +20,19 @@ export default function Register(props) {
   }
 
   return (
-    <div class="login">
-      <form class="login" onSubmit={(e) => {
+    <div className="login">
+      <form className="login" onSubmit={(e) => {
         e.preventDefault();
         handleRegister(formData);
       }}>
-        <h3 class="login-title">Register</h3>
+        <h3 className="login-title">Register</h3>
         {
           error &&
           <p>{error}</p>
         }
         <label>
           <input
-            class="login-input"
+            className="login-input"
             type="text"
             value={username}
             name="username"
@@ -42,7 +42,7 @@ export default function Register(props) {
         </label>
         <label>
           <input
-            class="login-input"
+            className="login-input"
             type="text"
             value={name}
             name="name"
@@ -52,7 +52,7 @@ export default function Register(props) {
         </label>
         <label>
           <input
-            class="login-input"
+            className="login-input"
             type="text"
             value={email}
             name="email"
@@ -62,7 +62,7 @@ export default function Register(props) {
         </label>
         <label>
         <input
-            class="login-input"
+            className="login-input"
             type="password"
             value={password}
             name="password"
@@ -70,7 +70,7 @@ export default function Register(props) {
             onChange={handleChange}
           />
         </label>
-        <button class="login-button">REGISTER</button>
+        <button className="login-button">REGISTER</button>
       </form>
     </div>
   )

@@ -19,19 +19,19 @@ export default function Login(props) {
   }
 
   return (
-    <div class="login">
-      <form class="login" onSubmit={(e) => {
+    <div className="login">
+      <form className="login" onSubmit={(e) => {
         e.preventDefault();
         handleLogin(formData);
       }}>
-        <h3 class="login-title">Log in</h3>
+        <h3 className="login-title">Log in</h3>
         {
           error &&
           <p>{error}</p>
         }
         <label>
           <input
-            class="login-input"
+            className="login-input"
             type="text"
             value={username}
             name="username"
@@ -41,7 +41,7 @@ export default function Login(props) {
         </label>
         <label>
           <input
-            class="login-input"
+            className="login-input"
             type="password"
             value={password}
             name="password"
@@ -50,7 +50,7 @@ export default function Login(props) {
           />
         </label>
         
-          <button class="login-button">LOG IN</button>
+          <button className="login-button">LOG IN</button>
         
 
       </form>

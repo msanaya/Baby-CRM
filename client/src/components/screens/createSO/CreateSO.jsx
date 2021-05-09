@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 // import Products from '../screens/products/Products';
-import { destroySalesOrder, createSalesOrder } from '../../../services/sales_orders';
+// import { destroySalesOrder, createSalesOrder } from '../../../services/sales_orders';
 import '../createSO/CreateSO.css'
 
 
