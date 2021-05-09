@@ -74,7 +74,7 @@ const Main = (props) => {
 
     <div className="main-container">
       <h1 id="main-title">Da Haus.</h1>
-      <h2 className="main-subtitle">Welcome {currentUser?.name}</h2>
+      <h2 className="main-subtitle">Welcome! {currentUser?.name}</h2>
       <h3 id="main-h3">Hello, thanks for stopping by! The site is currently being redone. Check back soon.</h3>
       <img id="main-border" src="watercolorBorder.png" alt="Watercolor border" />
     </div>
